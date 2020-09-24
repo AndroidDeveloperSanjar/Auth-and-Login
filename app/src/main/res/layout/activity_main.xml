@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#3F51B5"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/ll_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="30dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Next"
+            android:textSize="17sp"
+            android:fontFamily="@font/productsans_bold"
+            android:layout_gravity="center_vertical"
+            android:textColor="@android:color/white"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:srcCompat="@drawable/ic_next"/>
+
+
+    </LinearLayout>
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_login"
+        android:layout_width="200dp"
+        android:layout_below="@+id/ll_next"
+        android:layout_height="200dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/ic_login" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/text_input_layout_address"
+        style="@style/TextInputLayout.OutlineBox.CustomFont"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_below="@+id/iv_login"
+        android:layout_marginEnd="30dp"
+        android:hint="Phone number"
+        android:textColorHint="#E0E0E0"
+        app:hintAnimationEnabled="true"
+        android:layout_marginTop="10dp"
+        app:hintTextAppearance="@style/TextLabel"
+        app:hintTextColor="#E0E0E0"
+        app:placeholderTextColor="@android:color/white">
+
+        <br.com.sapereaude.maskedEditText.MaskedEditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:inputType="phone"
+            android:typeface="sans"
+            app:allowed_chars="1234567890"
+            app:mask="+998( ## ) ### - ## - ##" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <!--    <com.google.android.material.card.MaterialCardView-->
+    <!--        android:layout_width="200dp"-->
+    <!--        android:layout_height="50dp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_centerHorizontal="true"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        app:cardBackgroundColor="#CFD8DC"-->
+    <!--        android:layout_marginBottom="20dp"-->
+    <!--        app:cardCornerRadius="25dp"-->
+    <!--        app:cardElevation="7dp">-->
+
+    <!--        <RelativeLayout-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="match_parent">-->
+
+    <!--            <TextView-->
+    <!--                android:layout_width="wrap_content"-->
+    <!--                android:layout_height="wrap_content"-->
+    <!--                android:text="Auth"-->
+    <!--                android:layout_centerInParent="true"-->
+    <!--                android:textColor="@android:color/black"-->
+    <!--                android:fontFamily="@font/productsans_bold"-->
+    <!--                android:textSize="19sp"/>-->
+
+    <!--        </RelativeLayout>-->
+
+    <!--    </com.google.android.material.card.MaterialCardView>-->
+
+
+</RelativeLayout>
